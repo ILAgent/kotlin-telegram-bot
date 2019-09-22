@@ -116,7 +116,8 @@ class Dispatcher {
         for (group in commandHandlers) {
             group.value
                 .firstOrNull { it.checkUpdate(update) }
-                ?.handlerCallback(bot, update)
+                ?.handlerCallback
+                ?.invoke(bot, update)
         }
     }
 
