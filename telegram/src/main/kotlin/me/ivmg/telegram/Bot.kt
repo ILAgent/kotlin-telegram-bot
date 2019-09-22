@@ -158,27 +158,10 @@ class Bot private constructor(
     fun sendAudio(
         chatId: Long,
         audio: String,
-        caption: String? = null,
-        disableNotification: Boolean? = null,
-        replyToMessageId: Long? = null,
-        replyMarkup: ReplyMarkup? = null
-    ) = apiClient.sendAudio(
-        chatId,
-        audio,
-        null,
-        null,
-        caption,
-        disableNotification,
-        replyToMessageId,
-        replyMarkup
-    ).call()
-
-    fun sendAudio(
-        chatId: Long,
-        audio: SystemFile,
         duration: Int? = null,
         performer: String? = null,
         title: String? = null,
+        caption: String? = null,
         disableNotification: Boolean? = null,
         replyToMessageId: Long? = null,
         replyMarkup: ReplyMarkup? = null
@@ -188,6 +171,7 @@ class Bot private constructor(
         duration,
         performer,
         title,
+        caption,
         disableNotification,
         replyToMessageId,
         replyMarkup
@@ -195,7 +179,7 @@ class Bot private constructor(
 
     fun sendAudio(
         chatId: Long,
-        audio: String,
+        audio: SystemFile,
         duration: Int? = null,
         performer: String? = null,
         title: String? = null,
