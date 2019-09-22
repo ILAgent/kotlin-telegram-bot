@@ -115,8 +115,8 @@ class Dispatcher {
     private fun handleUpdate(update: Update) {
         for (group in commandHandlers) {
             group.value
-                .filter { it.checkUpdate(update) }
-                .forEach { it.handlerCallback(bot, update) }
+                .firstOrNull { it.checkUpdate(update) }
+                ?.handlerCallback(bot, update)
         }
     }
 
