@@ -195,6 +195,7 @@ class ApiClient(
         duration: Int?,
         performer: String?,
         title: String?,
+        caption: String?,
         disableNotification: Boolean?,
         replyToMessageId: Long?,
         replyMarkup: ReplyMarkup?
@@ -206,6 +207,7 @@ class ApiClient(
             duration,
             performer,
             title,
+            caption,
             disableNotification,
             replyToMessageId,
             replyMarkup

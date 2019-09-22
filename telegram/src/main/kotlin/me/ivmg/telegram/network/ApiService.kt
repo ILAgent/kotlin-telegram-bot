@@ -116,6 +116,7 @@ interface ApiService {
         @Field("duration") duration: Int?,
         @Field("performer") performer: String?,
         @Field("title") title: String?,
+        @Field("caption") caption: String?,
         @Field("disable_notification") disableNotification: Boolean?,
         @Field("reply_to_message_id") replyToMessageId: Long?,
         @Field("reply_markup") replyMarkup: ReplyMarkup? = null
