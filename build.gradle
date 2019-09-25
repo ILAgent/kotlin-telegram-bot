@@ -5,11 +5,11 @@ buildscript {
 }
 
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.2.50"
+    id "org.jetbrains.kotlin.jvm" //version "1.2.50"
 }
 
 allprojects {
-    apply from: "$rootDir/ktlint.gradle"
+    //apply from: "$rootDir/ktlint.gradle"
 
     group 'me.ivmg.kotlin-telegram-bot'
     version '0.3.4'
